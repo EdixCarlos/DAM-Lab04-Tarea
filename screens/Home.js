@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text, Button, FlatList, TouchableOpacity, ScrollView, Image, StyleSheet } from 'react-native'
+import { View, Text, FlatList, TouchableOpacity, ScrollView, Image } from 'react-native'
 import { global } from '../styles/global'
 const Home = ({ navigation }) => {
     const [details, setDetails] = useState([
@@ -72,7 +72,7 @@ const Home = ({ navigation }) => {
             <FlatList 
                 data={details}
                 renderItem={({ item }) => (
-                    <View>
+                    
                     <TouchableOpacity onPress={() => navigation.navigate("Details", item)}>
                         <View style={ global.flatList }>
 
@@ -88,7 +88,6 @@ const Home = ({ navigation }) => {
                         </View>
                     </TouchableOpacity>
                     
-                    </View>
                 )}
             />
             </ScrollView>
